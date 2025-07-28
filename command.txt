@@ -1,22 +1,29 @@
-git init	# create a git
-git config --global user.email test@gmail.com	# set email
-git config --global user.name Davood	#set name
-git status	# check status
-git add test.txt	# add a file to stage
-git add -A	# add all file to stage
-git commit -m "content of that commit"	# commit all file that exist in stage
-git reset test.txt	# comeback a file from stage
-git restore	# after a file went to stage this command comeback a file to first mode 
-git log		#commit logs
-git checkout 8d3fe409d42d50afa1b0995eff64d25d8f4933e1 -- test.txt	# reset a file to a commit 
-git checkout -- test	# back to last commit before change
-git checkout branch_name	# change branch
-git branch	# show all branch
-git branch branch_name	# create a new branch
-git checkout branch_name	# switch to other branch
-git switch branch_name	# switch to other branch 
-git merge branch_name	# merge another branch to master branch 
-git rm test.txt		# delete a file
-git push origin main    #push from local to github
-git pull origin main    #push a file from github to local
-git branch -d branch_name	# delete a branch
+git init                            # ساخت مخزن گیت لوکال
+git config --global user.email test@gmail.com     # تنظیم ایمیل گلوبال
+git config --global user.name Davood              # تنظیم نام گلوبال
+
+git status                         # نمایش وضعیت فایل‌ها
+git add test.txt                   # افزودن یک فایل به استیج
+git add -A                         # افزودن همه فایل‌ها به استیج (جدید، تغییر یافته، حذف شده)
+
+git commit -m "message"            # کامیت کردن فایل‌های استیج‌شده با پیغام
+
+git reset test.txt                 # خارج کردن فایل از استیج (قبل از کامیت)
+git restore test.txt               # بازگردانی فایل به آخرین وضعیت در دیسک (نسخه unstaged)
+
+git log                            # نمایش تاریخچه کامیت‌ها
+
+git checkout 8d3fe... -- test.txt  # بازیابی نسخه‌ی خاصی از فایل (از روی هش کامیت)
+git checkout -- test.txt           # بازگرداندن فایل به آخرین کامیت
+
+git branch                         # نمایش همه شاخه‌ها
+git branch branch_name             # ایجاد شاخه جدید
+git checkout branch_name           # رفتن به شاخه‌ای دیگر
+git switch branch_name             # (جدیدتر) رفتن به شاخه دیگر
+git merge branch_name              # ادغام شاخه موردنظر با شاخه جاری
+
+git rm test.txt                    # حذف فایل از گیت (و سیستم فایل)
+git push origin main               # ارسال تغییرات به ریپوی آنلاین (GitHub)
+git pull origin main               # دریافت آخرین تغییرات از ریپوی آنلاین
+
+git branch -d branch_name          # حذف شاخه محلی (اگه ادغام شده باشه)
