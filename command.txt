@@ -17,6 +17,6 @@ git checkout branch_name	# switch to other branch
 git switch branch_name	# switch to other branch 
 git merge branch_name	# merge another branch to master branch 
 git rm test.txt		# delete a file
-git push origin main  #push from local to github
-git pull origin main  #push a file from github to local
-git branch -d branch_name
+git push origin main    #push from local to github
+git pull origin main    #push a file from github to local
+git branch -d branch_name	# delete a branch
